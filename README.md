@@ -108,18 +108,6 @@ graph TD
 * **Contexto:** Envio e controle de atestados médicos ou declarações de trabalho pelos alunos para a coordenação.
 * **Entidade:** `JustificativaAusencia`
   * Atributos: `id` (Long), `matriculaAluno` (String), `motivo` (String: `SAUDE`, `TRABALHO`, `LUTO`, `OUTRO`), `dataInicio` (LocalDate), `diasAfastamento` (Integer), `dataFim` (LocalDate), `status` (String: `EM_ANALISE`, `ACEITO`, `RECUSADO`)
-* **Script DDL para SQL Server:**
-```sql
-CREATE TABLE tb_justificativa_ausencia (
-    id BIGINT IDENTITY(1,1) PRIMARY KEY,
-    matricula_aluno VARCHAR(30) NOT NULL,
-    motivo VARCHAR(20) NOT NULL,
-    data_inicio DATE NOT NULL,
-    dias_afastamento INT NOT NULL,
-    data_fim DATE NOT NULL,
-    status VARCHAR(20) NOT NULL DEFAULT 'EM_ANALISE'
-);
-```
 * **Endpoints:**
   * `GET /api/justificativas` — Lista todas as justificativas.
   * `GET /api/justificativas/{id}` — Consulta justificativa por ID.
