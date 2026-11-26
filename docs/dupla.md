@@ -1,3 +1,3 @@
 # duplas
-1.
-2.
+1.Ariel Melo Ribeiro
+2. Matheus Silvestre
