@@ -1,0 +1,14 @@
+create database JusAusencia;
+use JusAusencia;
+
+
+create table justificativa_ausencia (
+    id bigint identity(1,1) primary key,
+    m_aluno varchar(20)  not null,
+    motivo varchar(20)  not null,   
+    data_inicio date not null,
+    dias_afastamento int not null,
+    data_fim date not null,
+    status_atual varchar(20)  not null    
+);
+
